@@ -208,3 +208,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Local DCASE datasets and generated artifacts
+clap.tar.gz
+clap_text.tar.gz
+features/
+experiments/
+results/submission.jsonl
+results/submission_metrics.json
+src/train.py.bak

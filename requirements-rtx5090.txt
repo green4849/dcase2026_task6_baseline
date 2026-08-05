@@ -1,0 +1,7 @@
+easydict>=1.13
+numpy<2.0
+packaging>=26.0
+pandas>=2.3.3
+pyyaml>=6.0.3
+scikit-learn>=1.6.1
+tqdm>=4.67.3

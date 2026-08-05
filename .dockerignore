@@ -1,0 +1,8 @@
+features/
+results/
+experiments/
+*.tar
+*.tar.gz
+*.log
+.git/
+__pycache__/
