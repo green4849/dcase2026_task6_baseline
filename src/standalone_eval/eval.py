@@ -134,6 +134,37 @@ def compute_mr_r1(submission, ground_truth, iou_thds=np.linspace(0.5, 0.95, 10))
     return iou_thd2recall_at_one
 
 
+def compute_mr_rk(submission, ground_truth, k=5, iou_thds=np.linspace(0.5, 0.95, 10)):
+    """R@k — 상위 k개 예측 중 하나라도 어떤 GT 창과 IoU >= thd 이면 hit.
+
+    k=1 이면 compute_mr_r1 과 정확히 같은 값이 나온다. compute_mr_r1 이 하는
+    "rank-1 예측에 대해 IoU 최대인 GT 를 고른 뒤 IoU >= thd" 는
+    max_g IoU(pred_1, g) >= thd 와 동치이기 때문이다. (07_verify_r5.py 가 이걸 검증한다)
+
+    IoU 규약은 gte (>=) — compute_mr_r1 과 동일하다.
+    """
+    iou_thds = [float(f"{e:.2f}") for e in iou_thds]
+    gt_qid2windows = {d["qid"]: d["relevant_windows"] for d in ground_truth}
+
+    best_ious = []
+    for d in submission:
+        preds = d["pred_relevant_windows"][:k]
+        gts = gt_qid2windows.get(d["qid"], [])
+        if len(preds) == 0 or len(gts) == 0:
+            best_ious.append(0.0)
+            continue
+        pred_arr = np.array([w[:2] for w in preds], dtype=float)
+        gt_arr = np.array([w[:2] for w in gts], dtype=float)
+        iou = compute_temporal_iou_batch_cross(pred_arr, gt_arr)[0]  # (n_pred, n_gt)
+        # 길이가 0 이거나 역전된 창에서 union 이 0/음수가 될 수 있다.
+        # compute_temporal_iou_batch_paired 가 union==0 을 0 으로 두는 것과 같은 처리다.
+        iou = np.clip(np.nan_to_num(iou, nan=0.0, posinf=0.0, neginf=0.0), 0.0, None)
+        best_ious.append(float(np.max(iou)))
+
+    best_ious = np.array(best_ious)
+    return {str(thd): float(f"{np.mean(best_ious >= thd) * 100:.2f}") for thd in iou_thds}
+
+
 def get_window_len(window):
     return window[1] - window[0]
 
@@ -186,7 +217,9 @@ def eval_moment_retrieval(submission, ground_truth, verbose=True):
               f"{100*len(_ground_truth)/len(ground_truth):.2f} examples.")
         iou_thd2average_precision = compute_mr_ap(_submission, _ground_truth, num_workers=8, chunksize=50)
         iou_thd2recall_at_one = compute_mr_r1(_submission, _ground_truth)
-        ret_metrics[name] = {"MR-mAP": iou_thd2average_precision, "MR-R1": iou_thd2recall_at_one}
+        iou_thd2recall_at_five = compute_mr_rk(_submission, _ground_truth, k=5)
+        ret_metrics[name] = {"MR-mAP": iou_thd2average_precision, "MR-R1": iou_thd2recall_at_one,
+                             "MR-R5": iou_thd2recall_at_five}
         if verbose:
             print(f"[eval_moment_retrieval] [{name}] {time.time() - start_time:.2f} seconds")
     return ret_metrics
@@ -337,6 +370,8 @@ def eval_submission(submission, ground_truth, verbose=True, match_number=True):
             "MR-full-mAP@0.75": moment_ret_scores["full"]["MR-mAP"]["0.75"],
             "MR-full-R1@0.5": moment_ret_scores["full"]["MR-R1"]["0.5"],
             "MR-full-R1@0.7": moment_ret_scores["full"]["MR-R1"]["0.7"],
+            "MR-full-R5@0.5": moment_ret_scores["full"]["MR-R5"]["0.5"],
+            "MR-full-R5@0.7": moment_ret_scores["full"]["MR-R5"]["0.7"],
         }
         eval_metrics_brief.update(
             sorted([(k, v) for k, v in moment_ret_scores_brief.items()], key=lambda x: x[0]))
