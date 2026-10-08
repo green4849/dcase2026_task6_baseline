@@ -5,6 +5,7 @@
 ## 무엇을 돌리나
 
 - 코드: `legacy/task6-qd-detr`(rev `481d60b`)의 `src/`를 **수정 없이** import한다. `qd_resumable.py`는 `train.main()+train()`과 같은 순서로 학습하고, epoch마다 전체 상태를 저장하는 부분만 더했다.
+- 이 문서는 당시 실행 기록이다. 이후 현재 브랜치에 공식 attention mask 및 CASTELLA 주석 수정이 병합되었다. 이미 생성된 `DONE.json`, 예측, 지표는 수정 전 결과이며, 미완료 단계를 이어 실행할 때는 해당 실행의 코드·데이터 버전(`481d60b`)을 유지해야 한다.
 - seed 2023–2027을 차례로 돈다. seed마다 다음 순서다.
   1. `P_s<seed>`: Clotho-Moment 사전학습. `config_pretraining.yml` 그대로(200 epoch, lr 1e-4, batch 32, 매 epoch Clotho val 4,918개 평가, best val R1@0.7 checkpoint)
   2. `F_s<seed>`: CASTELLA 미세조정. `config.yml` 그대로이며, P의 best checkpoint 가중치로 시작한다(공식 `--resume`과 같은 방식). 10 seed CASTELLA-only 실행의 `configs/castella_seed<seed>.yml`과 results_dir만 다르다.
