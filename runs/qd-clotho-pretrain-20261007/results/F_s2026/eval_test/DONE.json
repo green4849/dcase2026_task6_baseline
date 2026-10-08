@@ -1,0 +1,14 @@
+{
+ "split": "test",
+ "checkpoint_sha256": "f8682d9aa15c26be336fd9466b82c17f962d86d65a79acb2f946d277cf4b2471",
+ "config_sha256": "ee0967d2d71333914ea164e700e0791d9f684f99e6fd8dbb27087fbc67daed78",
+ "brief": {
+  "MR-full-R1@0.5": 28.73,
+  "MR-full-R1@0.7": 16.85,
+  "MR-full-R5@0.5": 47.22,
+  "MR-full-R5@0.7": 27.84,
+  "MR-full-mAP": 13.6,
+  "MR-full-mAP@0.5": 24.91,
+  "MR-full-mAP@0.75": 12.55
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "config_sha256": "6cf30729d9c6915a7ec22e2841e9ecc82ef42eb21e628341c4db8534b11b33d2",
+ "init_checkpoint_sha256": null,
+ "code_sha256": "d22eb448b7c93ca4be892e7790fc642bdc2bf6174e62738f97ee6277f071f2ea",
+ "best_epoch": 134,
+ "best_checkpoint_sha256": "ead2aa971b407de12aa826d0b783847e9ff7f54b83e7aa8457fcf73841f0b5cd",
+ "best_val_brief": {
+  "MR-full-R1@0.5": 88.94,
+  "MR-full-R1@0.7": 83.04,
+  "MR-full-R5@0.5": 96.44,
+  "MR-full-R5@0.7": 89.61,
+  "MR-full-mAP": 78.16,
+  "MR-full-mAP@0.5": 92.48,
+  "MR-full-mAP@0.75": 83.48
+ },
+ "init": null
+}

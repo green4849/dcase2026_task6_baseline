@@ -1,0 +1,17 @@
+{
+ "config_sha256": "64f0193004e5bf189d4f8a92b2311761e37447a83ed27553f4aa2c3ec8f19486",
+ "init_checkpoint_sha256": "005a58131e0b1e7031cc9fd4d866ddb9957e324b3e7a724d8d7bffa777be4c9f",
+ "code_sha256": "d22eb448b7c93ca4be892e7790fc642bdc2bf6174e62738f97ee6277f071f2ea",
+ "best_epoch": 49,
+ "best_checkpoint_sha256": "21515cf19bf68caea3a7b94205fbf28573361fff9c1dec5b9b1f833b3c9ac0b5",
+ "best_val_brief": {
+  "MR-full-R1@0.5": 29.26,
+  "MR-full-R1@0.7": 18.18,
+  "MR-full-R5@0.5": 46.59,
+  "MR-full-R5@0.7": 27.56,
+  "MR-full-mAP": 13.48,
+  "MR-full-mAP@0.5": 25.89,
+  "MR-full-mAP@0.75": 12.93
+ },
+ "init": "/home/soyeong/dcase2026/results/qd-clotho-pretrain-20261007/results/P_s2023/best_checkpoint.pth"
+}
