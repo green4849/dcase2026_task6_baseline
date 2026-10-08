@@ -1,0 +1,240 @@
+{
+ "basis": "fork 481d60b (legacy/task6-qd-detr) data/castella_*_release.jsonl; a query is kept when its recording has an M2D audio feature and the query has an M2D text feature",
+ "excluded": {
+  "-kZcI-URaP0_1": {
+   "split": "train",
+   "vid": "-kZcI-URaP0",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "434PeTJp_-U_1": {
+   "split": "train",
+   "vid": "434PeTJp_-U",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "434PeTJp_-U_2": {
+   "split": "train",
+   "vid": "434PeTJp_-U",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "434PeTJp_-U_3": {
+   "split": "train",
+   "vid": "434PeTJp_-U",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "513CzG8jol8_1": {
+   "split": "train",
+   "vid": "513CzG8jol8",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "513CzG8jol8_2": {
+   "split": "train",
+   "vid": "513CzG8jol8",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "6qJbaPULG9E_1": {
+   "split": "train",
+   "vid": "6qJbaPULG9E",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "6qJbaPULG9E_2": {
+   "split": "train",
+   "vid": "6qJbaPULG9E",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "6qJbaPULG9E_3": {
+   "split": "train",
+   "vid": "6qJbaPULG9E",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "6qJbaPULG9E_4": {
+   "split": "train",
+   "vid": "6qJbaPULG9E",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "7rfNL38g26Y_1": {
+   "split": "train",
+   "vid": "7rfNL38g26Y",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "7rfNL38g26Y_2": {
+   "split": "train",
+   "vid": "7rfNL38g26Y",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "7rfNL38g26Y_3": {
+   "split": "train",
+   "vid": "7rfNL38g26Y",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "97ylbEEycVs_1": {
+   "split": "train",
+   "vid": "97ylbEEycVs",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "RptORGFO8cY_1": {
+   "split": "train",
+   "vid": "RptORGFO8cY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "RptORGFO8cY_2": {
+   "split": "train",
+   "vid": "RptORGFO8cY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "RptORGFO8cY_3": {
+   "split": "train",
+   "vid": "RptORGFO8cY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "UuST6ut8oEY_1": {
+   "split": "train",
+   "vid": "UuST6ut8oEY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "UuST6ut8oEY_2": {
+   "split": "train",
+   "vid": "UuST6ut8oEY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "UuST6ut8oEY_3": {
+   "split": "train",
+   "vid": "UuST6ut8oEY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "_zkh5zIsQd0_1": {
+   "split": "train",
+   "vid": "_zkh5zIsQd0",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "_zkh5zIsQd0_2": {
+   "split": "train",
+   "vid": "_zkh5zIsQd0",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "_zkh5zIsQd0_3": {
+   "split": "train",
+   "vid": "_zkh5zIsQd0",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "zt-fpyDnKrY_1": {
+   "split": "train",
+   "vid": "zt-fpyDnKrY",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "slZLHwNbbt4_1": {
+   "split": "val",
+   "vid": "slZLHwNbbt4",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "slZLHwNbbt4_2": {
+   "split": "val",
+   "vid": "slZLHwNbbt4",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "wwyfGO2J__4_1": {
+   "split": "val",
+   "vid": "wwyfGO2J__4",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "wwyfGO2J__4_2": {
+   "split": "val",
+   "vid": "wwyfGO2J__4",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "x4dZyf9Gbj0_1": {
+   "split": "val",
+   "vid": "x4dZyf9Gbj0",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "yaln9y8I7ms_1": {
+   "split": "val",
+   "vid": "yaln9y8I7ms",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "yaln9y8I7ms_2": {
+   "split": "val",
+   "vid": "yaln9y8I7ms",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "yiUDYRSJpJI_1": {
+   "split": "val",
+   "vid": "yiUDYRSJpJI",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "yiUDYRSJpJI_2": {
+   "split": "val",
+   "vid": "yiUDYRSJpJI",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "DjKGzOe_COc_1": {
+   "split": "test",
+   "vid": "DjKGzOe_COc",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "JmWaRt8-u0s_1": {
+   "split": "test",
+   "vid": "JmWaRt8-u0s",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "JmWaRt8-u0s_2": {
+   "split": "test",
+   "vid": "JmWaRt8-u0s",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "MTaLknnq4wc_1": {
+   "split": "test",
+   "vid": "MTaLknnq4wc",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "MTaLknnq4wc_2": {
+   "split": "test",
+   "vid": "MTaLknnq4wc",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "Smdj6JFB9MQ_1": {
+   "split": "test",
+   "vid": "Smdj6JFB9MQ",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "Smdj6JFB9MQ_2": {
+   "split": "test",
+   "vid": "Smdj6JFB9MQ",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "ZUmZgPL0ges_1": {
+   "split": "test",
+   "vid": "ZUmZgPL0ges",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "ZUmZgPL0ges_2": {
+   "split": "test",
+   "vid": "ZUmZgPL0ges",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "ZUmZgPL0ges_3": {
+   "split": "test",
+   "vid": "ZUmZgPL0ges",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "_GI7meqlYZk_1": {
+   "split": "test",
+   "vid": "_GI7meqlYZk",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "_GI7meqlYZk_2": {
+   "split": "test",
+   "vid": "_GI7meqlYZk",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "_GI7meqlYZk_3": {
+   "split": "test",
+   "vid": "_GI7meqlYZk",
+   "reason": "no audio feature (source recording unavailable)"
+  },
+  "kEP-BwMarf8_1": {
+   "split": "test",
+   "vid": "kEP-BwMarf8",
+   "reason": "no audio feature (source recording unavailable)"
+  }
+ }
+}

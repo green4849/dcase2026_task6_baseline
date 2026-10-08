@@ -1,0 +1,21 @@
+{
+ "config_sha256": "44b626ee52bd4a42845d63b47b35704b86291cb19fc9de082c2650f10b3e9b4c",
+ "init_checkpoint_sha256": "76073bcf099e2d9bbac2a8da3839cafcefed36eb7f444d3cfec93896a855cf7d",
+ "code_sha256": "38943fb6b47ab649038a582442788369e6212219499ee6502c9702c6bbfeb4d5",
+ "data_sha256": {
+  "train": "67f0292ac78cc184698663c3e838df2e67cb5e6b5d182935160ee791d54b7ab1",
+  "val": "b5de20c70f53ca63aa18dbd696e0deed1c0b9c1b43a9e18e9f6d72ab11d59fdf"
+ },
+ "best_epoch": 140,
+ "best_checkpoint_sha256": "08f4156cf298ee4fb4cc54fbd9ebf69dd1a9e7366c080f9d012b7441200a00d5",
+ "best_val_brief": {
+  "MR-full-R1@0.5": 47.81,
+  "MR-full-R1@0.7": 33.24,
+  "MR-full-R5@0.5": 68.51,
+  "MR-full-R5@0.7": 49.27,
+  "MR-full-mAP": 25.84,
+  "MR-full-mAP@0.5": 44.52,
+  "MR-full-mAP@0.75": 24.89
+ },
+ "init": "/home/soyeong/dcase2026/results/qd-m2d-clotho-pretrain-20261008/results/clotho_pretrain_m2d_s2023/best_checkpoint.pth"
+}
